@@ -7,7 +7,6 @@ $(function() {
 		
 	];
 	var i = 0;
-
 	function slide() {
 		$("#first_image").attr("src", images[i]);
 		if (i < (images.length - 1)) {
@@ -17,7 +16,6 @@ $(function() {
 		}
 	}
 	setInterval(slide, 2000);
-
 	var chatData = [
 		{
 			img: "img/ava_2.jpg",
@@ -40,7 +38,6 @@ $(function() {
 			message: "Из достопримечательностей могу предложить обратить внимание на вулкан Майон, путешествие запомнится вам надолго хотя бы из-за невероятной сложности подъема на него. Поверьте, это стоит того; также хотелf бы отметить очень важную область исследования",
 		},
 	];
-
 	function appendDate(data) {
 		$(".chat-area").append(`
 			<li class="chat-item">
@@ -49,11 +46,9 @@ $(function() {
 			</li>
 		`)
 	}
-
 	chatData.forEach(function(item){
 		appendDate(item);
 	});
-
 	$(".chat-footer").on("submit", function(e) {
 		var message = $(this).serializeArray()[0].value;
 		e.preventDefault();
