@@ -6,10 +6,12 @@
 }
 
 body {
-	background-color: #E5E5E5;
+	background-color: #f9f7f2;
 	font-family: 'Roboto', sans-serif;
 }
-
+.clearfix {
+	clear: both;
+}
 .container {
 	width: 879px;
 	margin: 0px auto;
@@ -76,6 +78,7 @@ body {
 
 .main_para {
 	font-size: 17px;
+	line-height: 25px;
 	color: #000000;
 	margin-bottom: 15px;
 }
@@ -118,6 +121,9 @@ body {
 .comment-list-container {
 	overflow-x: scroll;
 }
+.comment-list-container::-webkit-scrollbar {
+  width: 0px;
+}
 .comment-list {
 	height: 380px;
 	width: 2000px;
@@ -128,6 +134,7 @@ body {
 	background: #F9F7F2;
 	height: 380px;
 	width: 300px;
+	padding: 10px;
 }
 .comment_ava {
 	width: 30px;
@@ -169,10 +176,32 @@ body {
 .comment_img_container {
 	margin-bottom: 20px;
 }
-
+.comment_img_container div {
+	width: 64px;
+	height: 50px;
+	padding: 3px;
+	float: left;
+	position: relative;
+}
+.comment_img_container div span {
+	background: rgba(0, 0, 0, 0.5);
+	left: 3px;
+	right: 3px;
+	top: 3px;
+	bottom: 3px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+}
 .comment_img {
 	width: 64px;
 	height: 50px;
+}
+.comment_img:last-child {
+	background: tan;
 }
 
 .comment-meta-info {
@@ -279,12 +308,24 @@ body {
 	list-style: none;
 	overflow-y: scroll;
 }
+
+.chat-area::-webkit-scrollbar {
+  width: 3px;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+  background: #FF4641;
+  width: 3px;
+}
+
 .chat-item {
 	display: flex;
 	margin-bottom: 20px;
 }
 .chat-item p {
 	font-size: 15px;
+	line-height: 24px;
+	padding: 15px;
 }
 .chat-item-img {
 	width: 30px;
